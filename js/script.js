@@ -41,47 +41,22 @@ let homeSwiper = new Swiper(".home-swiper", {
     navigation: {
         nextEl: '.geserButton',
         prevEl: '.swiper-button-prev',
-    },
+      },
 
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-      },
+      },
 });
 
-// Add a click event listener to the parent container of all "Geser Lebih Lanjut" buttons
-document.getElementById("home").addEventListener("click", function (event) {
-    // Check if the clicked element or its ancestor has the class "geserButton"
-    if (event.target.closest(".geserButton")) {
-        // Calculate the index of the next slide
-        let nextIndex = homeSwiper.activeIndex + 1;
-
-        // Check if it's the last slide
-        if (nextIndex >= homeSwiper.slides.length) {
-            nextIndex = 0;
-        }
-
-        // Go to the next slide
-        homeSwiper.slideTo(nextIndex, 1000, false); // Use the third parameter 'false' to disable animation
-    }
+// Menambahkan delay pada tombol nextEl
+let nextButton = document.querySelector('.geserButton');
+nextButton.addEventListener('click', function() {
+    setTimeout(function() {
+        homeSwiper.slideNext();
+    }, 3000); // Delay 1 detik sebelum slider bergeser
 });
 
-// Get the geserButton element
-let geserButton = document.getElementById("geserButton");
-
-// Add a click event listener to the geserButton
-geserButton.addEventListener("click", function () {
-    // Calculate the index of the next slide
-    let nextIndex = homeSwiper.activeIndex + 1;
-
-    // Check if it's the last slide
-    if (nextIndex >= homeSwiper.slides.length) {
-        nextIndex = 0;
-    }
-
-    // Go to the next slide
-    homeSwiper.slideTo(nextIndex, 1000, false); // Use the third parameter 'false' to disable animation
-});
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader(){
