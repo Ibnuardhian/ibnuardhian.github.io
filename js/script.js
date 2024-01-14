@@ -54,7 +54,7 @@ let nextButton = document.querySelector('.geserButton');
 nextButton.addEventListener('click', function() {
     setTimeout(function() {
         homeSwiper.slideNext();
-    }, 3000); // Delay 1 detik sebelum slider bergeser
+    }, 3000);
 });
 
 
