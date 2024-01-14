@@ -229,8 +229,7 @@ body.overflow-hidden {
 }
 
 .list-view .task-item:hover {
-  background-color: rgb(194, 194, 194);
-  opacity: 0.5;
+  background-color: #dfd3bc;
   transition: 0.4s ease;
   padding: 10px;
   border-radius: 10px;

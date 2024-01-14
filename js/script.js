@@ -124,7 +124,7 @@ sr.reveal(`.about__img, .lesgow__data`,{origin: 'right'})
 
 document.querySelectorAll('.KeCatat').forEach(function(element) {
     element.addEventListener('click', function() {
-        window.location.href = '../pages/dashboard.html';
+        window.location.href = '/pages/dashboard.html';
     });
 });
 
