@@ -14,7 +14,7 @@ function askForNotificationPermission() {
   }
 }
 
-// Fungsi untuk mendapatkan nama bulan dari tanggal
+/// Fungsi untuk mendapatkan nama bulan dari tanggal
 function getFormattedDateWithMonthName(dateString) {
   const date = new Date(dateString);
   const month = getMonthName(date);
@@ -35,6 +35,13 @@ function shortenTaskName(taskName) {
     return shortenedName + "...";
   }
   return taskName;
+}
+
+// Fungsi untuk menambahkan waktu notifikasi unik
+function addUniqueNotificationTime(array, time) {
+  if (!array.includes(time)) {
+    array.push(time);
+  }
 }
 
 // Fungsi untuk menjadwalkan notifikasi
@@ -62,9 +69,6 @@ function scheduleNotification(taskId, dueDateDay) {
   );
 
   if (task) {
-    // Clear existing scheduled notifications for the task
-    clearScheduledNotifications(taskId, dueDateDay);
-
     const dueDateTime = new Date(`${task.dueDateDay}T${task.dueDateTime}`);
     const currentTime = new Date();
     const timeDiff = dueDateTime.getTime() - currentTime.getTime();
@@ -81,33 +85,18 @@ function scheduleNotification(taskId, dueDateDay) {
       const interval1hari = 24 * 60 * 60 * 1000;
       const interval3hari = 3 * 24 * 60 * 60 * 1000;
 
-      if (timeDiff > interval3hari) {
-        notificationsScheduled[taskId].push({
-          time: timeDiff - interval3hari,
-          index: 2,
-        });
+      if (timeDiff > interval12jam) {
+        addUniqueNotificationTime(notificationsScheduled[taskId], timeDiff - interval12jam);
       }
       if (timeDiff > interval1hari) {
-        notificationsScheduled[taskId].push({
-          time: timeDiff - interval1hari,
-          index: 1,
-        });
+        addUniqueNotificationTime(notificationsScheduled[taskId], timeDiff - interval1hari);
       }
-      if (timeDiff > interval12jam) {
-        notificationsScheduled[taskId].push({
-          time: timeDiff - interval12jam,
-          index: 0,
-        });
-      } else {
-        // If time difference is within 12 hours, schedule an additional notification for 12 hours
-        notificationsScheduled[taskId].push({
-          time: timeDiff,
-          index: 3,
-        });
+      if (timeDiff > interval3hari) {
+        addUniqueNotificationTime(notificationsScheduled[taskId], timeDiff - interval3hari);
       }
 
       notificationsScheduled[taskId] = notificationsScheduled[taskId].sort(
-        (a, b) => a.time - b.time
+        (a, b) => a - b
       );
 
       notificationsScheduled[taskId] = [
@@ -115,10 +104,10 @@ function scheduleNotification(taskId, dueDateDay) {
       ];
 
       notificationsScheduled[taskId] = notificationsScheduled[taskId].filter(
-        (notification) => notification.time > 0
+        (notificationTime) => notificationTime > 0
       );
 
-      notificationsScheduled[taskId].forEach((notification) => {
+      notificationsScheduled[taskId].forEach((notificationTime, index) => {
         setTimeout(() => {
           const currentTasks =
             JSON.parse(localStorage.getItem("taskUserTodo")) || [];
@@ -131,26 +120,16 @@ function scheduleNotification(taskId, dueDateDay) {
             const formattedDueDate = getFormattedDateWithMonthName(
               task.dueDateDay
             );
-
-            let message = "";
-            if (notification.index === 0) {
-              message = "Tersisa 12 jam";
-            } else if (notification.index === 1) {
-              message = "Tersisa 1 hari";
-            } else if (notification.index === 2) {
-              message = "Tersisa 3 hari";
-            } else if (notification.index === 3) {
-              message = "Tersisa kurang dari 12 jam";
-            }
-
             const notificationOptions = {
-              body: `Tugas "${shortenedName}" ${message} sebelum ${formattedDueDate}`,
+              body: `Tugas "${shortenedName}" tersisa ${
+                index === 0 ? "12 jam" : index === 1 ? "1 hari" : "3 hari"
+              } sebelum ${formattedDueDate}`,
               icon: "../img/gears.png",
               vibrate: [300, 200, 300],
             };
 
             // Cek apakah notifikasi sudah pernah ditampilkan sebelumnya
-            const notificationKey = `${taskId}_${dueDateDay}_${notification.index}`;
+            const notificationKey = `${taskId}_${dueDateDay}_${index}`;
             const notificationAlreadyShown =
               JSON.parse(localStorage.getItem("notificationsShown")) || {};
             if (!notificationAlreadyShown[notificationKey]) {
@@ -170,9 +149,21 @@ function scheduleNotification(taskId, dueDateDay) {
                 "notificationsShown",
                 JSON.stringify(notificationAlreadyShown)
               );
+
+              // Hapus ID notifikasi dari notificationsScheduled
+              const indexToRemove = notificationsScheduled[taskId].indexOf(
+                notificationKey
+              );
+              if (indexToRemove !== -1) {
+                notificationsScheduled[taskId].splice(indexToRemove, 1);
+                localStorage.setItem(
+                  "notificationsScheduled",
+                  JSON.stringify(notificationsScheduled)
+                );
+              }
             }
           }
-        }, notification.time);
+        }, notificationTime);
       });
 
       localStorage.setItem(
@@ -182,26 +173,87 @@ function scheduleNotification(taskId, dueDateDay) {
     }
   }
 }
+
+// Fungsi untuk memeriksa dan menampilkan notifikasi yang terlewat
+function checkMissedNotifications() {
+  const missedNotifications =
+    JSON.parse(localStorage.getItem("missedNotifications")) || {};
+
+  Object.keys(missedNotifications).forEach((taskId) => {
+    missedNotifications[taskId].forEach((notification) => {
+      if (notification.time < Date.now()) {
+        // Display missed notification
+        const task = tasks.find((t) => t.id === taskId);
+        const formattedDueDate = getFormattedDateWithMonthName(
+          task.dueDateDay
+        );
+        const shortenedName = shortenTaskName(task.name);
+
+        const notificationOptions = {
+          body: `Anda melewatkan tugas "${shortenedName}" yang jatuh tempo pada ${formattedDueDate}`,
+          icon: "../img/gears.png",
+          vibrate: [300, 200, 300],
+        };
+
+        if ("Notification" in window && Notification.permission === "granted") {
+          new Notification("Notifikasi CATAT!", notificationOptions);
+        } else {
+          console.warn("Izin notifikasi tidak diberikan.");
+        }
+      }
+    });
+
+    // Remove checked missed notifications
+    delete missedNotifications[taskId];
+  });
+
+  // Save updated missed notifications
+  localStorage.setItem(
+    "missedNotifications",
+    JSON.stringify(missedNotifications)
+  );
+}
+
+// Fungsi untuk menandai notifikasi yang terlewat
+function markMissedNotification(taskId, dueDateDay, index) {
+  const missedNotifications =
+    JSON.parse(localStorage.getItem("missedNotifications")) || {};
+
+  if (!missedNotifications[taskId]) {
+    missedNotifications[taskId] = [];
+  }
+
+  const notificationKey = `${taskId}_${dueDateDay}_${index}`;
+  const notificationAlreadyShown =
+    JSON.parse(localStorage.getItem("notificationsShown")) || {};
+
+  if (!notificationAlreadyShown[notificationKey]) {
+    missedNotifications[taskId].push({
+      key: notificationKey,
+      time: Date.now(),
+    });
+  }
+
+  localStorage.setItem(
+    "missedNotifications",
+    JSON.stringify(missedNotifications)
+  );
+}
+
+// Fungsi untuk memeriksa notifikasi yang terlewat saat halaman dimuat
+function checkMissedNotificationsOnLoad() {
+  checkMissedNotifications();
+  // Tambahan: Hapus missedNotifications setelah dicek
+  localStorage.removeItem("missedNotifications");
+}
+
 // Fungsi untuk menjadwalkan semua notifikasi
 function scheduleAllNotifications() {
   const tasks = JSON.parse(localStorage.getItem("taskUserTodo")) || [];
   tasks.forEach((task) => scheduleNotification(task.id, task.dueDateDay));
 }
-// Fungsi untuk membersihkan notifikasi yang sudah dijadwalkan untuk tugas ini
-function clearScheduledNotifications(taskId, dueDateDay) {
-  const notificationsScheduled =
-    JSON.parse(localStorage.getItem("notificationsScheduled")) || {};
 
-  if (notificationsScheduled[taskId]) {
-    notificationsScheduled[taskId] = notificationsScheduled[taskId].filter(
-      (notification) => notification.dueDateDay !== dueDateDay
-    );
-
-    localStorage.setItem(
-      "notificationsScheduled",
-      JSON.stringify(notificationsScheduled)
-    );
-  }
-}
 // Meminta izin notifikasi saat halaman dimuat
 askForNotificationPermission();
+// Memeriksa notifikasi yang terlewat saat halaman dimuat
+checkMissedNotificationsOnLoad();
