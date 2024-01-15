@@ -100,6 +100,10 @@ body.overflow-hidden {
   width: 100%;
 }
 
+.header h2{
+  text-align: center;
+}
+
 
 /* radio buttons for view options */
 .radio-buttons-container {
@@ -345,7 +349,6 @@ body.overflow-hidden {
   display: grid;
   place-items: center;
   /* if content is longer than screen height, enable scrollbar */
-  overflow: hidden;
   box-shadow: black;
   transition: opacity .5s ease-in-out;
   animation: fadeIn 0.3s ease-in-out;
@@ -378,6 +381,7 @@ body.overflow-hidden {
   position: relative;
   background-color: #F4BF96;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 /* Edit overlay */
@@ -429,15 +433,9 @@ body.overflow-hidden {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  overflow-y: auto; /* Menambahkan scrolling vertical jika kontennya lebih besar dari layar */
-  max-height: 95vh; /* Menentukan tinggi maksimum konten agar tidak melewati layar */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   
 }
+
 
 .view-task-overlay .overlay-content .overlay-button {
   /* Mengatur tombol-tombol ke kanan */
@@ -464,6 +462,7 @@ body.overflow-hidden {
   /* Gaya atau styling tambahan */
   box-shadow: none;
   border: 2px solid #d18c56;
+  margin-bottom: -20px;
 }
 
 .view-task-overlay .close-button,.view-task-overlay .edit-button, .view-task-overlay .delete-button {
@@ -607,6 +606,10 @@ font-size: 20px;
 .label{
   margin-top: 40px;
 }
+
+.edit-task-overlay .label h2{
+  text-align: center;
+}
 .label, .secondary-label{
   color: #9c673e;
   font-weight: 5000;
@@ -648,12 +651,10 @@ input [type="text"]{
   background-color: #FFF2D8;
   border: none;
   width: 100%;
-  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  resize: none;
 }
 
 .textarea-container {
@@ -839,7 +840,6 @@ input [type="text"]{
   .overlay-content {
     max-width: 100%;
     padding: var(--space-16);
-    overflow-y: auto;
     overflow-y: auto;
   }
 
