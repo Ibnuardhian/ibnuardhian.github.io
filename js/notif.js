@@ -1,17 +1,57 @@
-// Fungsi untuk meminta persetujuan notifikasi
+// Fungsi untuk meminta persetujuan notifikasi dengan prompt
 function askForNotificationPermission() {
   if ("Notification" in window) {
-    Notification.requestPermission().then((permission) => {
-      if (permission === "granted") {
-        console.log("Persetujuan notifikasi diberikan!");
-        scheduleAllNotifications(); // Menjadwalkan notifikasi setelah izin diberikan
+    // Periksa apakah izin notifikasi sudah disetujui sebelumnya
+    const notificationPermission = getCookie("notificationPermission");
+
+    if (notificationPermission === "granted") {
+      console.log("Izin notifikasi sudah diberikan sebelumnya.");
+      scheduleAllNotifications(); // Menjadwalkan notifikasi jika izin sudah diberikan
+    } else {
+      // Menampilkan prompt untuk konfirmasi dari pengguna
+      const userConsent = window.confirm("Apakah Anda ingin menerima notifikasi?");
+
+      if (userConsent) {
+        Notification.requestPermission().then((permission) => {
+          if (permission === "granted") {
+            console.log("Persetujuan notifikasi diberikan!");
+            // Simpan izin notifikasi ke dalam cookies (expired setelah 1 tahun)
+            setCookie("notificationPermission", "granted", 365);
+            scheduleAllNotifications(); // Menjadwalkan notifikasi setelah izin diberikan
+          } else {
+            console.warn("Persetujuan notifikasi tidak diberikan.");
+          }
+        });
       } else {
-        console.warn("Persetujuan notifikasi tidak diberikan.");
+        console.log("Anda tidak memberikan persetujuan notifikasi.");
+        // Simpan penolakan izin notifikasi ke dalam cookies (expired setelah 1 hari)
+        setCookie("notificationPermission", "denied", 1);
       }
-    });
+    }
   } else {
     console.error("Browser tidak mendukung notifikasi.");
   }
+}
+
+
+// Fungsi untuk mengambil nilai cookie
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
+// Fungsi untuk menetapkan nilai cookie
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
 /// Fungsi untuk mendapatkan nama bulan dari tanggal
@@ -124,7 +164,7 @@ function scheduleNotification(taskId, dueDateDay) {
               body: `Tugas "${shortenedName}" tersisa ${
                 index === 0 ? "12 jam" : index === 1 ? "1 hari" : "3 hari"
               } sebelum ${formattedDueDate}`,
-              icon: "../img/gears.png",
+              icon: "/assetes/img/logo-catat6.png",
               vibrate: [300, 200, 300],
             };
 
