@@ -131,7 +131,7 @@
       "startDate": "Jan 2026",
       "endDate": "Present",
       "description": "Developing Halcom Dashboard, an internal application to track project requests across Sales, SOA, and Purchasing. Automating the sales pipeline with Deal IDs connecting BOQ, Calculation, and PO & Inquiry workflows. Building Power BI dashboards for Management, Sales, and Finance.",
-      "logo": "",
+      "logo": "/logos/logo-halcom.png",
       "skills": [
         "Project Management",
         "Business Process Automation",
@@ -146,7 +146,7 @@
       "startDate": "Sep 2024",
       "endDate": "Feb 2025",
       "description": "Built a Kaizen and task assignment application for 15?20 users using PHP, CodeIgniter 4, MySQL, AJAX, and Nginx. Reduced missed assignments and project manager/coordinator follow-up time. Also served as Project Manager: prepared project documentation and coordinated an 8-person team across 3 projects with a total value of IDR 80 million.",
-      "logo": "",
+      "logo": "/logos/logo-toyota.png",
       "skills": [
         "PHP",
         "CodeIgniter 4",
@@ -163,7 +163,7 @@
       "startDate": "",
       "endDate": "",
       "description": "Built a web-based PPDB platform using the TALL Stack (Laravel), serving 800+ students and improving registration efficiency by 70%. Developed application logic and data-entry interfaces. Also built a CMS that improved content management efficiency by 90%.",
-      "logo": "",
+      "logo": "/logos/logo-man1bogor.png",
       "skills": [
         "Laravel",
         "TALL Stack",

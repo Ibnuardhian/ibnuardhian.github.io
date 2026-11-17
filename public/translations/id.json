@@ -131,7 +131,7 @@
       "startDate": "Jan 2026",
       "endDate": "Present",
       "description": "Mengembangkan Halcom Dashboard, aplikasi internal untuk melacak permintaan proyek antara tim Sales, SOA, dan Purchasing. Mengotomasi sales pipeline dengan Deal ID yang menghubungkan alur BOQ, Calculation, serta PO & Inquiry. Membuat dashboard Power BI untuk Management, Sales, dan Finance.",
-      "logo": "",
+      "logo": "/logos/logo-halcom.png",
       "skills": [
         "Project Management",
         "Business Process Automation",
@@ -146,7 +146,7 @@
       "startDate": "Sep 2024",
       "endDate": "Feb 2025",
       "description": "Membangun aplikasi Kaizen dan penugasan untuk 15?20 pengguna menggunakan PHP, CodeIgniter 4, MySQL, AJAX, dan Nginx. Mengurangi penugasan yang terlewat serta waktu tindak lanjut PM/CM. Juga berperan sebagai Project Manager: menyiapkan dokumentasi dan mengoordinasikan tim 8 orang pada 3 proyek senilai total Rp80 juta.",
-      "logo": "",
+      "logo": "/logos/logo-toyota.png",
       "skills": [
         "PHP",
         "CodeIgniter 4",
@@ -163,7 +163,7 @@
       "startDate": "",
       "endDate": "",
       "description": "Membangun platform PPDB berbasis web dengan TALL Stack (Laravel), melayani lebih dari 800 siswa dan meningkatkan efisiensi pendaftaran sebesar 70%. Mengembangkan logika aplikasi dan antarmuka entri data. Juga membangun CMS yang meningkatkan efisiensi pengelolaan konten sebesar 90%.",
-      "logo": "",
+      "logo": "/logos/logo-man1bogor.png",
       "skills": [
         "Laravel",
         "TALL Stack",
