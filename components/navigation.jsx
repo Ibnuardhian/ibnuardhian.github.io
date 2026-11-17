@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import NavItem from "./nav-item";
 
-const Navigation = () => {
+const Navigation = ({ labels }) => {
     const [activeSection, setActiveSection] = useState(null);
     const observer = useRef(null);
 
@@ -30,12 +30,13 @@ const Navigation = () => {
 
     return (
         <div id='navigation' className='flex flex-col py-10 font-medium tracking-widest'>
-            <NavItem active={activeSection === 'about' ? true : false} href='#about' num='01' name="ABOUT"></NavItem>
-            <NavItem active={activeSection === 'experiences' ? true : false} href='#experiences' num='02' name="EXPERIENCES"></NavItem>
-            <NavItem active={activeSection === 'education' ? true : false} href='#education' num='03' name="EDUCATION"></NavItem>
-            <NavItem active={activeSection === 'freelance-projects' ? true : false} href='#freelance-projects' num='04' name="FREELANCE PROJECTS"></NavItem>
-            <NavItem active={activeSection === 'personal-projects' ? true : false} href='#personal-projects' num='05' name="PERSONAL PROJECTS"></NavItem>
-            <NavItem active={activeSection === 'certifications' ? true : false} href='#certifications' num='06' name="CERTIFICATIONS"></NavItem>
+            <NavItem active={activeSection === 'about'} href='#about' num='01' name={labels[0]}></NavItem>
+            <NavItem active={activeSection === 'experiences'} href='#experiences' num='02' name={labels[1]}></NavItem>
+            <NavItem active={activeSection === 'education'} href='#education' num='03' name={labels[2]}></NavItem>
+            <NavItem active={activeSection === 'freelance-projects'} href='#freelance-projects' num='04' name={labels[3]}></NavItem>
+            <NavItem active={activeSection === 'personal-projects'} href='#personal-projects' num='05' name={labels[4]}></NavItem>
+            <NavItem active={activeSection === 'certifications'} href='#certifications' num='06' name={labels[5]}></NavItem>
+            <NavItem active={activeSection === 'skills'} href='#skills' num='07' name={labels[6]}></NavItem>
             {/* <NavItem active={activeSection === 'volunteering' ? true : false} href='#volunteering' num='06' name="VOLUNTEERING"></NavItem> */}
         </div>
     )

@@ -1,152 +1,392 @@
 {
-    "general": {
-        "name": "Muhammad Ibnu Ardhiansyah",
-        "headline": "I'm a self-taught",
-        "typewriterStrings": ["Backend Web Developer.", "Database Engineer.", "Fullstack Developer."],
-        "headlineSuffix": "with a proven ability to quickly learn and apply new technologies to build robust and scalable solutions.",
-        "about": [
-            "Hey there! 👋",
-            "Information Systems student leveraging web development and database administration skills to excel as a Backend Developer, Data Engineer, and Fullstack Developer. Proficient in various programming languages and databases. Highly curious, passionate about technology, and adept at solving complex problems innovatively."
-        ],
-        "socials": {
-            "email": "ibnuardhian@gmail.com",
-            "linkedin": "https://www.linkedin.com/in/ibnuardhian",
-            "github": "https://github.com/Ibnuardhian/"
-        },
-        "profileImage": "/images/profile-image.png"
+  "general": {
+    "name": "Muhammad Ibnu Ardhiansyah",
+    "headline": "Information Systems graduate",
+    "typewriterStrings": [
+      "PHP Developer.",
+      "Backend Developer.",
+      "Fullstack Developer."
+    ],
+    "headlineSuffix": " building practical web applications with PHP, CodeIgniter 4, Laravel, MySQL, and APIs.",
+    "about": [
+      "Information Systems graduate from Gunadarma University (2025), focused on PHP development with CodeIgniter 4 and Laravel, MVC, OOP, MySQL, and API integration. Built an internal task management application, a PPDB platform serving 800+ students, CMS solutions, and e-commerce applications. Ready to contribute to ERP development using PHP and CodeIgniter 4."
+    ],
+    "socials": {
+      "email": "ibnuardhian@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/ibnuardhian",
+      "github": "https://github.com/Ibnuardhian/"
     },
-    "experiences": [
-        {
-            "title": "Associate Product Manager Intern",
-            "company": "PT. Electronic Data Interchange Indonesia",
-            "href": "",
-            "startDate": "Aug 2024",
-            "endDate": "Sep 2024",
-            "description": "Expertise in creating documentation, working with teams, testing, and managing ERP software solutions for payroll..",
-            "logo": "/logos/logo-company-1.png",
-            "skills": ["Documentation", "Collaboration", "Testing", "Management"]
-        },
-        {
-            "title": "Backend Developer Intern",
-            "company": "Kedaireka.id",
-            "href": "https://kedaireka.id/",
-            "startDate": "Feb 2024",
-            "endDate": "Jun 2024",
-            "description": "Created a backend API using Golang, which interacts with SQL and JSON, and is equipped with unit testing.",
-            "logo": "/logos/logo-company-2.png",
-            "skills": ["Golang","API", "SQL","JSON", "Testing"]
-        }
+    "profileImage": "/images/profile-image.png",
+    "navigation": [
+      "ABOUT",
+      "EXPERIENCE",
+      "EDUCATION",
+      "PROJECTS",
+      "PERSONAL PROJECTS",
+      "CERTIFICATIONS",
+      "SKILLS"
     ],
-    "education": [
-        {
-            "subject": "Information Systems",
-            "degree": "Bachelor of Computer Science",
-            "university": "Gunadarma University", 
-            "href": "",
-            "startDate": "2021", 
-            "endDate": "Present", 
-            "description": "Highly achieving Information Systems student (GPA: 3.95/4.00) in the Excellent Class at Universitas Gunadarma, with a comprehensive understanding of algorithms, database management, web development, and system implementation."
-        }
-    ],
-    "volunteering": [
-        {
-            "position": "Position Name",
-            "event": "Event Name",
-            "organisation": "Organisation Name",
-            "href": "",
-            "startDate": "2022",
-            "endDate": "NOW",
-            "description": "Short description of your role at the event."
-        },
-        {
-            "position": "Position Name",
-            "event": "Event Name",
-            "organisation": "Organisation Name",
-            "href": "",
-            "startDate": "2022",
-            "endDate": "NOW",
-            "description": "Short description of your role at the event."
-        },
-        {
-            "position": "Position Name",
-            "event": "Event Name",
-            "organisation": "Organisation Name",
-            "href": "",
-            "startDate": "2022",
-            "endDate": "NOW",
-            "description": "Short description of your role at the event."
-        }
-    ],
-    "freelanceProjects": [
-        {
-            "name": "PPDB MAN 1 Bogor",
-            "role": "fullstack developer",
-            "description": "MAN 1 Bogor's online registration portal offers a modern and efficient way for new student registration, eliminating paperwork and allowing remote applications for a positive first impression.",
-            "href": "https://ppdb.man1kotabogor.id/",
-            "stacks": ["Tailwind", "Alpine.js", "Laravel", "Livewire", "PostgreSQL"]
-        },
-        {
-            "name": "MAN 1 Bogor Official Website",
-            "role": "fullstack developer",
-            "description": "Designed and built a official website, demonstrating skills in web development, user interface, and content presentation for MAN 1 Bogor.",
-            "href": "https://man1kotabogor.id/",
-            "stacks": ["Tailwind", "Alpine.js", "Laravel", "PostgreSQL"]
-        }
-    ],
-    "personalProjects": [
-        {
-            "name": "CATAT!",
-            "role": "fullstack developer",
-            "description": "Effortlessly manage your notes, tasks, and reminders with this web app. Designed for simplicity and speed, it enhances your productivity without needing a database.",
-            "href": "",
-            "stacks": ["HTML", "javascript", "CSS"]
-        }
-    ],
-    "certifications": [
-        {
-            "name": "Certificate of Training : Golang for Intermediate",
-            "organization": "Lembaga Pengembangan Komputerisasi Universitas Gunadarma",
-            "organizationHref": "https://vm.lepkom.gunadarma.ac.id/",
-            "description": "Mastering website development with Go, including unit testing, SQL, HTTP requests, Polymer framework (data binding, styling), to application deployment.",
-            "href": "https://e-sert.gunadarma.ac.id/cert/4013/0b8643d05b660dd365f677eb8188c4e5.pdf",
-            "date": "2024",
-            "skills": ["Golang", "Web Development", "Backend Web Development","JSON", "JWT"]
-        },
-        {
-            "name": "Certificate of Training : Oracle for Intermediate",
-            "organization": "Lembaga Pengembangan Komputerisasi Universitas Gunadarma",
-            "organizationHref": "https://vm.lepkom.gunadarma.ac.id/",
-            "description": "Understand the creation and management of tables, constraints, views, subqueries, explicit cursors, exception handling, and displaying data from multiple tables in a database.",
-            "href": "https://e-sert.gunadarma.ac.id/cert/2679/a7e8f4a01667b1b54910fd2b916cba0b.pdf",
-            "date": "2024",
-            "skills": ["Oracle SQL Development", "SQL","databases"]
-        },
-        {
-            "name": "Belajar Dasar Pemrograman JavaScript",
-            "organization": "Dicoding",
-            "organizationHref": "https://www.dicoding.com/",
-            "description": "Learn the basics of JavaScript programming starting from functions, using ES6 modules, installing packages, using Node.JS and testing.",
-            "href": "https://www.dicoding.com/certificates/0LZ0QWVERZ65",
-            "date": "2023",
-            "skills": ["Backend web development", "javascript","Node.js"]
-        },
-        {
-            "name": "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
-            "organization": "Dicoding",
-            "organizationHref": "https://www.dicoding.com/",
-            "description": "Learn about using cloud computing by referring to AWS's international competency standards and understand all kinds of services, global infrastructure and pricing. ",
-            "href": "https://www.dicoding.com/certificates/NVP7718YVPR0",
-            "date": "2023",
-            "skills": ["Cloud Computing", "databases","Amazon Web Services (AWS)"]
-        },
-        {
-            "name": "Skill Specialization Backend - Advanced Golang",
-            "organization": "MySkill",
-            "organizationHref": "https://myskill.id/",
-            "description": "Learn Golang to the next level by learning APIs, database connections, using frameworks, authentication and creating mini projects. ",
-            "href": "https://storage.googleapis.com/myskill-v2-certificates/topic-HlI5ftKc3iNRjMOwie1f/t2MDrMIXndbzmlDdMgjpoftncWF3-pgX2OUzzpt2O4kWDI76Z.pdf",
-            "date": "2023",
-            "skills": ["Backend Web Development", "Golang"]
-        }
+    "labels": {
+      "getInTouch": "Get in touch",
+      "skills": "Skills",
+      "backend": "Backend & Languages",
+      "frontend": "Frontend",
+      "database": "Database",
+      "industry": "Industry Knowledge",
+      "hardSkills": "Hard Skills",
+      "softSkills": "Soft Skills",
+      "tools": "Tools",
+      "freelanceProjects": "Project Experience",
+      "personalProjects": "Personal Projects",
+      "experience": "Professional Experience",
+      "education": "Education",
+      "certifications": "Certifications",
+      "language": "Language"
+    },
+    "skills": [
+      {
+        "category": "Backend & Languages",
+        "items": [
+          "PHP (Intermediate; CodeIgniter 4, Laravel, MVC, OOP)",
+          "SQL (Intermediate)",
+          "Golang (Intermediate)",
+          "JavaScript",
+          "Python"
+        ]
+      },
+      {
+        "category": "Frontend",
+        "items": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "AJAX",
+          "AlpineJS",
+          "Bootstrap",
+          "Tailwind CSS (TALL Stack)",
+          "Responsive dashboards"
+        ]
+      },
+      {
+        "category": "Database",
+        "items": [
+          "MySQL",
+          "SQL query writing and optimization",
+          "Relational database design",
+          "Oracle"
+        ]
+      },
+      {
+        "category": "Industry Knowledge",
+        "items": [
+          "Fullstack development",
+          "API development and integration",
+          "ERP systems",
+          "Business process automation",
+          "Project management",
+          "Data engineering"
+        ]
+      },
+      {
+        "category": "Hard Skills",
+        "items": [
+          "Unit testing",
+          "Quality assurance",
+          "Technical documentation",
+          "Dashboard development",
+          "Power BI"
+        ]
+      },
+      {
+        "category": "Soft Skills",
+        "items": [
+          "Communication",
+          "Collaboration",
+          "Problem solving",
+          "Adaptability",
+          "Leadership"
+        ]
+      },
+      {
+        "category": "Tools",
+        "items": [
+          "Git",
+          "GitHub",
+          "GitLab",
+          "Nginx",
+          "Postman",
+          "VS Code",
+          "Power BI",
+          "Oracle",
+          "Google Colab"
+        ]
+      }
     ]
+  },
+  "experiences": [
+    {
+      "title": "Project Management Officer",
+      "company": "PT Halcom Inovasi Teknologi",
+      "href": "",
+      "startDate": "Jan 2026",
+      "endDate": "Present",
+      "description": "Developing Halcom Dashboard, an internal application to track project requests across Sales, SOA, and Purchasing. Automating the sales pipeline with Deal IDs connecting BOQ, Calculation, and PO & Inquiry workflows. Building Power BI dashboards for Management, Sales, and Finance.",
+      "logo": "",
+      "skills": [
+        "Project Management",
+        "Business Process Automation",
+        "Power BI",
+        "Dashboard Development"
+      ]
+    },
+    {
+      "title": "Freelance Fullstack Developer",
+      "company": "PT. Toyota Motor Manufacturing Indonesia",
+      "href": "",
+      "startDate": "Sep 2024",
+      "endDate": "Feb 2025",
+      "description": "Built a Kaizen and task assignment application for 15?20 users using PHP, CodeIgniter 4, MySQL, AJAX, and Nginx. Reduced missed assignments and project manager/coordinator follow-up time. Also served as Project Manager: prepared project documentation and coordinated an 8-person team across 3 projects with a total value of IDR 80 million.",
+      "logo": "",
+      "skills": [
+        "PHP",
+        "CodeIgniter 4",
+        "MySQL",
+        "AJAX",
+        "Nginx",
+        "Project Management"
+      ]
+    },
+    {
+      "title": "Freelance Fullstack Developer",
+      "company": "MAN 1 Bogor",
+      "href": "https://ppdb.man1kotabogor.id/",
+      "startDate": "",
+      "endDate": "",
+      "description": "Built a web-based PPDB platform using the TALL Stack (Laravel), serving 800+ students and improving registration efficiency by 70%. Developed application logic and data-entry interfaces. Also built a CMS that improved content management efficiency by 90%.",
+      "logo": "",
+      "skills": [
+        "Laravel",
+        "TALL Stack",
+        "PHP",
+        "Fullstack Development",
+        "CMS"
+      ]
+    },
+    {
+      "title": "Associate Product Manager Intern",
+      "company": "PT. Electronic Data Interchange Indonesia",
+      "href": "",
+      "startDate": "Aug 2024",
+      "endDate": "Sep 2024",
+      "description": "Created documentation, collaborated with teams, and managed testing for ERP payroll software. Executed 80+ QA test cases to validate functionality before launch.",
+      "logo": "/logos/logo-company-1.png",
+      "skills": [
+        "Documentation",
+        "Collaboration",
+        "QA Testing",
+        "ERP"
+      ]
+    },
+    {
+      "title": "Backend Developer Intern",
+      "company": "Kedaireka.id",
+      "href": "https://kedaireka.id/",
+      "startDate": "Feb 2024",
+      "endDate": "Jun 2024",
+      "description": "Created a backend API using Golang, which interacts with SQL and JSON, and is equipped with unit testing.",
+      "logo": "/logos/logo-company-2.png",
+      "skills": [
+        "Golang",
+        "API",
+        "SQL",
+        "JSON",
+        "Testing"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "subject": "Information Systems",
+      "degree": "Bachelor of Computer Science",
+      "university": "Gunadarma University",
+      "href": "",
+      "startDate": "2021",
+      "endDate": "2025",
+      "description": "Graduated in 2025. GPA: 3.95/4.00; Excellent Class."
+    }
+  ],
+  "volunteering": [
+    {
+      "position": "Position Name",
+      "event": "Event Name",
+      "organisation": "Organisation Name",
+      "href": "",
+      "startDate": "2022",
+      "endDate": "NOW",
+      "description": "Short description of your role at the event."
+    },
+    {
+      "position": "Position Name",
+      "event": "Event Name",
+      "organisation": "Organisation Name",
+      "href": "",
+      "startDate": "2022",
+      "endDate": "NOW",
+      "description": "Short description of your role at the event."
+    },
+    {
+      "position": "Position Name",
+      "event": "Event Name",
+      "organisation": "Organisation Name",
+      "href": "",
+      "startDate": "2022",
+      "endDate": "NOW",
+      "description": "Short description of your role at the event."
+    }
+  ],
+  "freelanceProjects": [
+    {
+      "name": "Halcom Dashboard",
+      "role": "internal project",
+      "description": "Internal application for tracking project requests across Sales, SOA, and Purchasing, with Deal ID-based sales pipeline automation linking BOQ, Calculation, and PO & Inquiry.",
+      "href": "",
+      "stacks": [
+        "PHP",
+        "CodeIgniter 4",
+        "MySQL",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "PPDB MAN 1 Bogor",
+      "role": "fullstack developer",
+      "description": "Web-based student admission platform built with the TALL Stack (Laravel), serving more than 800 students and improving registration efficiency by 70%.",
+      "href": "https://ppdb.man1kotabogor.id/",
+      "stacks": [
+        "Tailwind CSS",
+        "AlpineJS",
+        "Laravel",
+        "Livewire",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "MAN 1 Bogor Official Website",
+      "role": "fullstack developer",
+      "description": "Official website and CMS for presenting school information and streamlining content management.",
+      "href": "https://man1kotabogor.id/",
+      "stacks": [
+        "Tailwind CSS",
+        "AlpineJS",
+        "Laravel",
+        "MySQL"
+      ]
+    }
+  ],
+  "personalProjects": [
+    {
+      "name": "Yamyam Snack",
+      "role": "fullstack developer",
+      "description": "E-commerce application with a third-party payment gateway integration. Built the backend with Laravel (PHP, MVC) and the frontend with AlpineJS and Bootstrap.",
+      "href": "",
+      "stacks": [
+        "Laravel",
+        "PHP",
+        "MVC",
+        "AlpineJS",
+        "Bootstrap",
+        "Payment Gateway"
+      ]
+    },
+    {
+      "name": "CATAT!",
+      "role": "fullstack developer",
+      "description": "Effortlessly manage notes, tasks, and reminders with this web app. Designed for simplicity and speed, it enhances productivity without needing a database.",
+      "href": "",
+      "stacks": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "BNSP Data Engineer Certification",
+      "organization": "BNSP",
+      "organizationHref": "",
+      "description": "Data Engineer professional certification.",
+      "href": "",
+      "date": "",
+      "skills": [
+        "Data Engineering"
+      ]
+    },
+    {
+      "name": "Certificate of Training : Golang for Intermediate",
+      "organization": "Lembaga Pengembangan Komputerisasi Universitas Gunadarma",
+      "organizationHref": "https://vm.lepkom.gunadarma.ac.id/",
+      "description": "Mastering website development with Go, including unit testing, SQL, HTTP requests, Polymer framework (data binding, styling), to application deployment.",
+      "href": "https://e-sert.gunadarma.ac.id/cert/4013/0b8643d05b660dd365f677eb8188c4e5.pdf",
+      "date": "2024",
+      "skills": [
+        "Golang",
+        "Web Development",
+        "Backend Web Development",
+        "JSON",
+        "JWT"
+      ]
+    },
+    {
+      "name": "Certificate of Training : Oracle for Intermediate",
+      "organization": "Lembaga Pengembangan Komputerisasi Universitas Gunadarma",
+      "organizationHref": "https://vm.lepkom.gunadarma.ac.id/",
+      "description": "Understand the creation and management of tables, constraints, views, subqueries, explicit cursors, exception handling, and displaying data from multiple tables in a database.",
+      "href": "https://e-sert.gunadarma.ac.id/cert/2679/a7e8f4a01667b1b54910fd2b916cba0b.pdf",
+      "date": "2024",
+      "skills": [
+        "Oracle SQL Development",
+        "SQL",
+        "databases"
+      ]
+    },
+    {
+      "name": "Belajar Dasar Pemrograman JavaScript",
+      "organization": "Dicoding",
+      "organizationHref": "https://www.dicoding.com/",
+      "description": "Learn the basics of JavaScript programming starting from functions, using ES6 modules, installing packages, using Node.JS and testing.",
+      "href": "https://www.dicoding.com/certificates/0LZ0QWVERZ65",
+      "date": "2023",
+      "skills": [
+        "Backend web development",
+        "javascript",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)",
+      "organization": "Dicoding",
+      "organizationHref": "https://www.dicoding.com/",
+      "description": "Learn about using cloud computing by referring to AWS's international competency standards and understand all kinds of services, global infrastructure and pricing. ",
+      "href": "https://www.dicoding.com/certificates/NVP7718YVPR0",
+      "date": "2023",
+      "skills": [
+        "Cloud Computing",
+        "databases",
+        "Amazon Web Services (AWS)"
+      ]
+    },
+    {
+      "name": "Skill Specialization Backend - Advanced Golang",
+      "organization": "MySkill",
+      "organizationHref": "https://myskill.id/",
+      "description": "Learn Golang to the next level by learning APIs, database connections, using frameworks, authentication and creating mini projects. ",
+      "href": "https://storage.googleapis.com/myskill-v2-certificates/topic-HlI5ftKc3iNRjMOwie1f/t2MDrMIXndbzmlDdMgjpoftncWF3-pgX2OUzzpt2O4kWDI76Z.pdf",
+      "date": "2023",
+      "skills": [
+        "Backend Web Development",
+        "Golang"
+      ]
+    }
+  ]
 }
