@@ -251,10 +251,22 @@
       "description": "Aplikasi internal untuk melacak permintaan proyek antara Sales, SOA, dan Purchasing, dilengkapi otomasi sales pipeline berbasis Deal ID yang menghubungkan BOQ, Calculation, serta PO & Inquiry.",
       "href": "",
       "stacks": [
+        "TypeScript",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "Sistem Kaizen & Penugasan Toyota",
+      "role": "fullstack developer",
+      "description": "Mengembangkan aplikasi web internal Kaizen dan penugasan untuk tim beranggotakan 15?20 pengguna menggunakan PHP, CodeIgniter 4, MySQL, dan AJAX, yang diterapkan pada server Nginx. Mengurangi kesalahan penugasan dan meningkatkan efisiensi distribusi tugas sehingga waktu yang digunakan PM/CM untuk membagikan pekerjaan menjadi lebih singkat. Menyusun dokumen dasar dan mengoordinasikan tim beranggotakan 8 orang pada 3 proyek secara bersamaan (total anggaran Rp80 juta), sekaligus menjalankan peran sebagai project manager.",
+      "href": "",
+      "stacks": [
         "PHP",
         "CodeIgniter 4",
         "MySQL",
-        "Power BI"
+        "AJAX",
+        "Nginx",
+        "Project Management"
       ]
     },
     {

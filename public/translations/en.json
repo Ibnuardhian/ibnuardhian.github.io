@@ -251,10 +251,22 @@
       "description": "Internal application for tracking project requests across Sales, SOA, and Purchasing, with Deal ID-based sales pipeline automation linking BOQ, Calculation, and PO & Inquiry.",
       "href": "",
       "stacks": [
+        "TypeScript",
+        "Power BI"
+      ]
+    },
+    {
+      "name": "Toyota Kaizen & Task Assignment System",
+      "role": "fullstack developer",
+      "description": "Developed internal Kaizen and task assignment web applications for a team of 15?20 users using PHP, CodeIgniter 4, MySQL, and AJAX, deployed on an Nginx server. Reduced task mis-assignment and improved task distribution efficiency, shortening the time PM/CM spend assigning work. Authored foundational documents and coordinated a team of 8 across 3 concurrent projects (total budget of Rp80 million), while also serving as project manager.",
+      "href": "",
+      "stacks": [
         "PHP",
         "CodeIgniter 4",
         "MySQL",
-        "Power BI"
+        "AJAX",
+        "Nginx",
+        "Project Management"
       ]
     },
     {
