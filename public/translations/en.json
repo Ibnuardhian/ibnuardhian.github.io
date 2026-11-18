@@ -45,33 +45,32 @@
     },
     "skills": [
       {
-        "category": "Backend & Languages",
+        "category": "Backend Development & Programming Languages",
         "items": [
-          "PHP (Intermediate; CodeIgniter 4, Laravel, MVC, OOP)",
-          "SQL (Intermediate)",
-          "Golang (Intermediate)",
+          "PHP (intermediate; CodeIgniter 4, Laravel, MVC, and OOP)",
+          "SQL (intermediate)",
+          "Golang (intermediate)",
           "JavaScript",
           "Python"
         ]
       },
       {
-        "category": "Frontend",
+        "category": "Frontend Development",
         "items": [
-          "HTML",
-          "CSS",
+          "HTML and CSS",
           "JavaScript",
           "AJAX",
-          "AlpineJS",
+          "Alpine.js",
           "Bootstrap",
-          "Tailwind CSS (TALL Stack)",
-          "Responsive dashboards"
+          "Tailwind CSS (TALL stack)",
+          "Responsive dashboard development"
         ]
       },
       {
-        "category": "Database",
+        "category": "Database Management",
         "items": [
           "MySQL",
-          "SQL query writing and optimization",
+          "SQL query development and optimisation",
           "Relational database design",
           "Oracle"
         ]
@@ -79,16 +78,16 @@
       {
         "category": "Industry Knowledge",
         "items": [
-          "Fullstack development",
+          "Full-stack application development",
           "API development and integration",
           "ERP systems",
-          "Business process automation",
+          "Business process analysis and automation",
           "Project management",
           "Data engineering"
         ]
       },
       {
-        "category": "Hard Skills",
+        "category": "Technical Skills",
         "items": [
           "Unit testing",
           "Quality assurance",
@@ -98,24 +97,24 @@
         ]
       },
       {
-        "category": "Soft Skills",
+        "category": "Interpersonal Skills",
         "items": [
-          "Communication",
-          "Collaboration",
-          "Problem solving",
+          "Clear communication",
+          "Cross-functional collaboration",
+          "Analytical problem-solving",
           "Adaptability",
-          "Leadership"
+          "Team leadership"
         ]
       },
       {
-        "category": "Tools",
+        "category": "Tools & Platforms",
         "items": [
           "Git",
           "GitHub",
           "GitLab",
           "Nginx",
           "Postman",
-          "VS Code",
+          "Visual Studio Code",
           "Power BI",
           "Oracle",
           "Google Colab"
@@ -258,7 +257,7 @@
     {
       "name": "Toyota Kaizen & Task Assignment System",
       "role": "fullstack developer",
-      "description": "Developed internal Kaizen and task assignment web applications for a team of 15?20 users using PHP, CodeIgniter 4, MySQL, and AJAX, deployed on an Nginx server. Reduced task mis-assignment and improved task distribution efficiency, shortening the time PM/CM spend assigning work. Authored foundational documents and coordinated a team of 8 across 3 concurrent projects (total budget of Rp80 million), while also serving as project manager.",
+      "description": "Built internal Kaizen and task assignment apps for 15?20 users with PHP, CodeIgniter 4, MySQL, and AJAX on Nginx, reducing misassignments and PM/CM task allocation time. Also prepared project documents and managed an 8-person team across three concurrent projects totaling Rp80 million.",
       "href": "",
       "stacks": [
         "PHP",

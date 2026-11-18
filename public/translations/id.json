@@ -258,7 +258,7 @@
     {
       "name": "Sistem Kaizen & Penugasan Toyota",
       "role": "fullstack developer",
-      "description": "Mengembangkan aplikasi web internal Kaizen dan penugasan untuk tim beranggotakan 15?20 pengguna menggunakan PHP, CodeIgniter 4, MySQL, dan AJAX, yang diterapkan pada server Nginx. Mengurangi kesalahan penugasan dan meningkatkan efisiensi distribusi tugas sehingga waktu yang digunakan PM/CM untuk membagikan pekerjaan menjadi lebih singkat. Menyusun dokumen dasar dan mengoordinasikan tim beranggotakan 8 orang pada 3 proyek secara bersamaan (total anggaran Rp80 juta), sekaligus menjalankan peran sebagai project manager.",
+      "description": "Membangun aplikasi internal Kaizen dan penugasan untuk 15?20 pengguna dengan PHP, CodeIgniter 4, MySQL, dan AJAX di Nginx, sekaligus mengurangi kesalahan penugasan dan waktu alokasi tugas PM/CM. Menyusun dokumen proyek dan memimpin tim 8 orang pada tiga proyek serentak senilai total Rp80 juta.",
       "href": "",
       "stacks": [
         "PHP",

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import NavItem from "./nav-item";
 
-const Navigation = ({ labels }) => {
+const Navigation = ({ labels, languageLabel, language, onLanguageChange }) => {
     const [activeSection, setActiveSection] = useState(null);
     const observer = useRef(null);
 
@@ -30,6 +30,23 @@ const Navigation = ({ labels }) => {
 
     return (
         <div id='navigation' className='flex flex-col py-10 font-medium tracking-widest'>
+            <div className="mb-4 flex items-center justify-between text-xs tracking-normal">
+                <span className="text-surface-600">{languageLabel}</span>
+                <div className="inline-flex rounded-full border border-surface-400 p-1" role="group" aria-label={languageLabel}>
+                    <button
+                        type="button"
+                        onClick={() => onLanguageChange('id')}
+                        aria-pressed={language === 'id'}
+                        className={`rounded-full px-3 py-1 transition-colors ${language === 'id' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}
+                    >ID</button>
+                    <button
+                        type="button"
+                        onClick={() => onLanguageChange('en')}
+                        aria-pressed={language === 'en'}
+                        className={`rounded-full px-3 py-1 transition-colors ${language === 'en' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}
+                    >EN</button>
+                </div>
+            </div>
             <NavItem active={activeSection === 'about'} href='#about' num='01' name={labels[0]}></NavItem>
             <NavItem active={activeSection === 'experiences'} href='#experiences' num='02' name={labels[1]}></NavItem>
             <NavItem active={activeSection === 'education'} href='#education' num='03' name={labels[2]}></NavItem>
