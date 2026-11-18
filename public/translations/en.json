@@ -1,13 +1,13 @@
 {
   "general": {
     "name": "Muhammad Ibnu Ardhiansyah",
-    "headline": "Information Systems graduate",
+    "headline": "I am a",
     "typewriterStrings": [
-      "PHP Developer.",
-      "Backend Developer.",
-      "Fullstack Developer."
+      "Fullstack Developer",
+      "Data Engineer",
+      "Project Manager"
     ],
-    "headlineSuffix": " building practical web applications with PHP, CodeIgniter 4, Laravel, MySQL, and APIs.",
+    "headlineSuffix": ", an Information Systems graduate from Gunadarma University (2025), focused on PHP, CodeIgniter 4, Laravel, MySQL, and API development.",
     "about": [
       "Information Systems graduate from Gunadarma University (2025), focused on PHP development with CodeIgniter 4 and Laravel, MVC, OOP, MySQL, and API integration. Built an internal task management application, a PPDB platform serving 800+ students, CMS solutions, and e-commerce applications. Ready to contribute to ERP development using PHP and CodeIgniter 4."
     ],

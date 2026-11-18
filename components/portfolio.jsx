@@ -30,6 +30,7 @@ export default function Portfolio({ translations }) {
         <div className="z-2 w-full max-w-5xl font-mono text-sm flex flex-col lg:flex-row justify-between">
             <Header
                 data={data.general}
+                typewriterStrings={data.general.typewriterStrings}
                 labels={data.general.labels}
                 navigation={data.general.navigation}
                 language={language}

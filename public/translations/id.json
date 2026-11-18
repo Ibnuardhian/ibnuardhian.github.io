@@ -1,13 +1,13 @@
 {
   "general": {
     "name": "Muhammad Ibnu Ardhiansyah",
-    "headline": "Lulusan Sistem Informasi",
+    "headline": "Saya adalah seorang",
     "typewriterStrings": [
-      "PHP Developer.",
-      "Backend Developer.",
-      "Fullstack Developer."
+      "Fullstack Developer",
+      "Data Engineer",
+      "Project Manager"
     ],
-    "headlineSuffix": " yang membangun aplikasi web praktis dengan PHP, CodeIgniter 4, Laravel, MySQL, dan API.",
+    "headlineSuffix": ", lulusan Sistem Informasi Universitas Gunadarma (2025) dengan fokus pada PHP, CodeIgniter 4, Laravel, MySQL, dan pengembangan API.",
     "about": [
       "Lulusan Sistem Informasi Universitas Gunadarma tahun 2025 dengan fokus pada pengembangan PHP menggunakan CodeIgniter 4 dan Laravel, MVC, OOP, MySQL, serta integrasi API. Berpengalaman membangun aplikasi manajemen tugas internal, platform PPDB untuk lebih dari 800 siswa, solusi CMS, dan aplikasi e-commerce. Siap berkontribusi dalam pengembangan ERP menggunakan PHP dan CodeIgniter 4."
     ],
