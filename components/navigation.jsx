@@ -30,7 +30,7 @@ const Navigation = ({ labels, languageLabel, language, onLanguageChange }) => {
 
     return (
         <div id='navigation' className='flex flex-col py-10 font-medium tracking-widest'>
-            <div className="mb-4 flex items-center justify-between text-xs tracking-normal">
+            <div className="mb-4 flex w-full items-center justify-between text-xs tracking-normal lg:w-[200%]">
                 <span className="text-surface-600">{languageLabel}</span>
                 <div className="inline-flex rounded-full border border-surface-400 p-1" role="group" aria-label={languageLabel}>
                     <button

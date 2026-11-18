@@ -16,7 +16,7 @@ const Header = (props) => {
     }, []);
 
     return (
-        <div className={`lg:fixed h-screen basis-1.5/4 flex flex-col justify-between pb-24 lg:pb-48 self-center lg:self-auto transition-colors duration-300 ${hasScrolled ? 'lg:bg-surface-100/95 lg:backdrop-blur-md lg:shadow-xl' : ''}`}>
+        <div className='lg:fixed h-screen basis-1.5/4 flex flex-col justify-between pb-24 lg:pb-48 self-center lg:self-auto'>
             <div className=''>
                 <h1 className='text-5xl subpixel-antialiased tracking-wide w-3/4'>{props.data.name}</h1>
                 <h2 className='text-surface-600 pt-2 text-base font-normal tracking-wider w-1/2'>
@@ -34,16 +34,9 @@ const Header = (props) => {
                 onLanguageChange={props.onLanguageChange}
             />
             <Socials data={props.data.socials} label={props.labels.getInTouch}></Socials>
-            {hasScrolled && (
-                <div className="fixed top-0 left-0 right-0 z-40 border-b border-surface-300 bg-surface-100/95 px-6 py-3 shadow-lg backdrop-blur-md lg:hidden">
-                    <span className="font-medium tracking-wide text-on-background">{props.data.name}</span>
-                </div>
-            )}
-            {hasScrolled && (
-                <div className="pointer-events-none fixed left-0 top-0 z-40 hidden h-14 w-full items-center border-b border-surface-300 bg-surface-100/95 px-8 shadow-lg backdrop-blur-md lg:flex">
-                    <span className="pointer-events-auto font-medium tracking-wide text-on-background">{props.data.name}</span>
-                </div>
-            )}
+            {hasScrolled && <div className="fixed left-1/2 top-0 z-40 w-[calc(100%-3rem)] max-w-5xl -translate-x-1/2 border-b border-surface-300 bg-surface-100/95 px-6 py-4 shadow-lg backdrop-blur-md">
+                <span className="font-medium tracking-wide text-on-background">{props.data.name}</span>
+            </div>}
         </div>
     )
 }
