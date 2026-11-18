@@ -7,7 +7,7 @@
       "Data Engineer",
       "Project Manager"
     ],
-    "headlineSuffix": "lulusan Sistem Informasi Universitas Gunadarma (2025) dengan fokus pada PHP, CodeIgniter 4, Laravel, MySQL, dan pengembangan API.",
+    "headlineSuffix": " dengan pengalaman membangun aplikasi web, layanan API, dan basis data relasional. Terbiasa menangani pekerjaan sejak analisis kebutuhan hingga rilis, serta menjaga ketelitian dan komunikasi yang baik dalam tim. Terbuka untuk mempelajari teknologi baru, menyusun kebutuhan, dan merancang basis data sampai tahap pengujian dan rilis.",
     "about": [
       "Lulusan S1 Sistem Informasi Universitas Gunadarma (2025) dengan pengalaman membangun aplikasi web, layanan API, dan basis data relasional. Terbiasa menangani pekerjaan sejak analisis kebutuhan hingga rilis, serta menjaga ketelitian dan komunikasi yang baik dalam tim. Terbuka untuk mempelajari teknologi baru, menyusun kebutuhan, dan merancang basis data hingga tahap pengujian dan rilis."
     ],
@@ -22,7 +22,6 @@
       "PENGALAMAN",
       "PENDIDIKAN",
       "PROYEK",
-      "PROYEK PERSONAL",
       "SERTIFIKASI",
       "KEAHLIAN"
     ],
@@ -110,6 +109,7 @@
       {
         "category": "Tools",
         "items": [
+          "MySQL",
           "Git",
           "GitHub",
           "GitLab",
@@ -293,9 +293,7 @@
         "Laravel",
         "MySQL"
       ]
-    }
-  ],
-  "personalProjects": [
+    },
     {
       "name": "Yamyam Snack",
       "role": "fullstack developer",
@@ -308,17 +306,6 @@
         "AlpineJS",
         "Bootstrap",
         "Payment Gateway"
-      ]
-    },
-    {
-      "name": "CATAT!",
-      "role": "fullstack developer",
-      "description": "Kelola catatan, tugas, dan pengingat dengan mudah melalui aplikasi web ini. Dirancang sederhana dan cepat, tanpa memerlukan basis data.",
-      "href": "",
-      "stacks": [
-        "HTML",
-        "JavaScript",
-        "CSS"
       ]
     }
   ],

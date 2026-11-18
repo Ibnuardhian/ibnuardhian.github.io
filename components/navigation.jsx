@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from "react";
-import NavItem from "./nav-item";
+
+const sectionIds = ['about', 'experiences', 'education', 'freelance-projects', 'certifications', 'skills'];
 
 const Navigation = ({ labels, languageLabel, language, onLanguageChange }) => {
     const [activeSection, setActiveSection] = useState(null);
@@ -10,53 +11,39 @@ const Navigation = ({ labels, languageLabel, language, onLanguageChange }) => {
     useEffect(() => {
         observer.current = new IntersectionObserver((entries) => {
             const visibleSection = entries.find((entry) => entry.isIntersecting)?.target;
-            if (visibleSection) {
-                setActiveSection(visibleSection.id);
-            }
-        }, {threshold:0.5});
+            if (visibleSection) setActiveSection(visibleSection.id);
+        }, { threshold: 0.25 });
 
         const sections = document.querySelectorAll('[data-section]');
-
-        sections.forEach((section) => {
-            observer.current.observe(section);
-        });
-
-        return () => {
-            sections.forEach((section) => {
-                observer.current.unobserve(section);
-            });
-        };
+        sections.forEach((section) => observer.current.observe(section));
+        return () => sections.forEach((section) => observer.current?.unobserve(section));
     }, []);
 
     return (
-        <div id='navigation' className='flex flex-col py-10 font-medium tracking-widest'>
-            <div className="mb-4 flex w-full items-center justify-between text-xs tracking-normal lg:w-[200%]">
-                <span className="text-surface-600">{languageLabel}</span>
-                <div className="inline-flex rounded-full border border-surface-400 p-1" role="group" aria-label={languageLabel}>
-                    <button
-                        type="button"
-                        onClick={() => onLanguageChange('id')}
-                        aria-pressed={language === 'id'}
-                        className={`rounded-full px-3 py-1 transition-colors ${language === 'id' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}
-                    >ID</button>
-                    <button
-                        type="button"
-                        onClick={() => onLanguageChange('en')}
-                        aria-pressed={language === 'en'}
-                        className={`rounded-full px-3 py-1 transition-colors ${language === 'en' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}
-                    >EN</button>
+        <nav id="navigation" aria-label="Main navigation" className="sticky top-0 z-50 -mx-6 mb-8 border-b border-surface-300 bg-surface-100/95 px-6 py-3 backdrop-blur-md lg:mx-0 lg:px-0">
+            <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex min-w-0 items-center gap-5 overflow-x-auto whitespace-nowrap pb-1 sm:order-1 sm:flex-1 sm:justify-start sm:gap-4 lg:gap-6">
+                    {sectionIds.map((id, index) => (
+                        <a
+                            key={id}
+                            href={`#${id}`}
+                            aria-current={activeSection === id ? 'location' : undefined}
+                            className={`shrink-0 border-b-2 py-2 text-xs font-medium tracking-widest transition-colors ${activeSection === id ? 'border-primary-500 text-on-background' : 'border-transparent text-surface-600 hover:text-on-background'}`}
+                        >
+                            {labels[index]}
+                        </a>
+                    ))}
+                </div>
+                <div className="flex shrink-0 items-center justify-between gap-3 text-xs tracking-normal sm:order-2 sm:justify-end">
+                    <span className="text-surface-600">{languageLabel}</span>
+                    <div className="inline-flex rounded-full border border-surface-400 p-1" role="group" aria-label={languageLabel}>
+                        <button type="button" onClick={() => onLanguageChange('id')} aria-pressed={language === 'id'} className={`rounded-full px-3 py-1 transition-colors ${language === 'id' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}>ID</button>
+                        <button type="button" onClick={() => onLanguageChange('en')} aria-pressed={language === 'en'} className={`rounded-full px-3 py-1 transition-colors ${language === 'en' ? 'bg-primary-500 text-surface-100' : 'text-surface-600 hover:text-on-background'}`}>EN</button>
+                    </div>
                 </div>
             </div>
-            <NavItem active={activeSection === 'about'} href='#about' num='01' name={labels[0]}></NavItem>
-            <NavItem active={activeSection === 'experiences'} href='#experiences' num='02' name={labels[1]}></NavItem>
-            <NavItem active={activeSection === 'education'} href='#education' num='03' name={labels[2]}></NavItem>
-            <NavItem active={activeSection === 'freelance-projects'} href='#freelance-projects' num='04' name={labels[3]}></NavItem>
-            <NavItem active={activeSection === 'personal-projects'} href='#personal-projects' num='05' name={labels[4]}></NavItem>
-            <NavItem active={activeSection === 'certifications'} href='#certifications' num='06' name={labels[5]}></NavItem>
-            <NavItem active={activeSection === 'skills'} href='#skills' num='07' name={labels[6]}></NavItem>
-            {/* <NavItem active={activeSection === 'volunteering' ? true : false} href='#volunteering' num='06' name="VOLUNTEERING"></NavItem> */}
-        </div>
-    )
-}
+        </nav>
+    );
+};
 
-export default Navigation
+export default Navigation;

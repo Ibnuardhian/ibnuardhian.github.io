@@ -7,7 +7,7 @@
       "Data Engineer",
       "Project Manager"
     ],
-    "headlineSuffix": "an Information Systems graduate from Gunadarma University (2025), focused on PHP, CodeIgniter 4, Laravel, MySQL, and API development.",
+    "headlineSuffix": " with experience building web applications, API services, and relational databases. Accustomed to taking work from requirements analysis through release while maintaining attention to detail and clear communication within a team. Open to learning new technologies and contributing to requirements definition, database design, testing, and release.",
     "about": [
       "A 2025 Information Systems graduate from Gunadarma University with experience building web applications, API services, and relational databases. Accustomed to seeing work through from requirements analysis to release, while maintaining attention to detail and clear communication within a team. Open to learning new technologies and contributing to requirements definition, database design, testing, and release."
     ],
@@ -22,7 +22,6 @@
       "EXPERIENCE",
       "EDUCATION",
       "PROJECTS",
-      "PERSONAL PROJECTS",
       "CERTIFICATIONS",
       "SKILLS"
     ],
@@ -109,6 +108,7 @@
       {
         "category": "Tools & Platforms",
         "items": [
+          "MySQL",
           "Git",
           "GitHub",
           "GitLab",
@@ -292,9 +292,7 @@
         "Laravel",
         "MySQL"
       ]
-    }
-  ],
-  "personalProjects": [
+    },
     {
       "name": "Yamyam Snack",
       "role": "fullstack developer",
@@ -307,17 +305,6 @@
         "AlpineJS",
         "Bootstrap",
         "Payment Gateway"
-      ]
-    },
-    {
-      "name": "CATAT!",
-      "role": "fullstack developer",
-      "description": "Effortlessly manage notes, tasks, and reminders with this web app. Designed for simplicity and speed, it enhances productivity without needing a database.",
-      "href": "",
-      "stacks": [
-        "HTML",
-        "JavaScript",
-        "CSS"
       ]
     }
   ],

@@ -9,6 +9,7 @@ import Projects from "@/components/projects/projects";
 import Certifications from "@/components/certifications/certifications";
 import Credits from "@/components/credits";
 import Skills from "@/components/skills";
+import Navigation from "@/components/navigation";
 
 export default function Portfolio({ translations }) {
     const [language, setLanguage] = useState("en");
@@ -27,24 +28,28 @@ export default function Portfolio({ translations }) {
     }
 
     return (
-        <div className="z-2 w-full max-w-5xl font-mono text-sm flex flex-col lg:flex-row justify-between">
+        <div className="z-2 flex w-full max-w-5xl flex-col font-mono text-sm">
+            <Navigation
+                labels={data.general.navigation}
+                languageLabel={data.general.labels.language}
+                language={language}
+                onLanguageChange={changeLanguage}
+            />
+            <div className="grid grid-cols-1 gap-10 pt-8 lg:grid-cols-[minmax(18rem,0.8fr)_minmax(0,1.2fr)] lg:gap-12">
             <Header
                 data={data.general}
                 typewriterStrings={data.general.typewriterStrings}
                 labels={data.general.labels}
-                navigation={data.general.navigation}
-                language={language}
-                onLanguageChange={changeLanguage}
             />
-            <div className="lg:pl-[50%]">
+            <div className="min-w-0">
                 <About data={data.general} />
                 <Experiences data={data.experiences} title={data.general.labels.experience} />
                 <Education data={data.education} title={data.general.labels.education} />
                 <Projects id="freelance-projects" title={data.general.labels.freelanceProjects} data={data.freelanceProjects} />
-                <Projects id="personal-projects" title={data.general.labels.personalProjects} data={data.personalProjects} />
                 <Certifications data={data.certifications} title={data.general.labels.certifications} />
                 <Skills data={data.general.skills} title={data.general.labels.skills} />
                 <Credits data={data.general} />
+            </div>
             </div>
         </div>
     );
