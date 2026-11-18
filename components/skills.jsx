@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Skills({ data, title }) {
     return (
-        <section data-section id="skills" className="min-h-screen py-24 flex flex-col justify-center">
+        <section data-section id="skills" className="mb-16">
             <h2 className="mb-8 visible lg:invisible font-medium tracking-widest">{title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {data.map((group) => (

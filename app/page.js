@@ -9,7 +9,7 @@ export default async function Home() {
   ]);
 
   return (
-    <main suppressHydrationWarning className="flex min-h-screen flex-col items-center px-6 lg:px-24">
+    <main suppressHydrationWarning className="flex min-h-screen flex-col items-center py-24 px-6 lg:px-24">
       <Portfolio translations={{ en: JSON.parse(english), id: JSON.parse(indonesian) }} />
     </main>
   )
